@@ -1,0 +1,33 @@
+{
+  "name": "mep-emails",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.ts",
+  "type": "module",
+  "scripts": {
+    "generate": "node --loader ts-node/esm main.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maulerjan/mep-emails.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maulerjan/mep-emails/issues"
+  },
+  "homepage": "https://github.com/maulerjan/mep-emails#readme",
+  "dependencies": {
+    "@types/json2csv": "^5.0.3",
+    "@types/node-fetch": "^2.6.1",
+    "cheerio": "^1.0.0-rc.10",
+    "fast-xml-parser": "^4.0.7",
+    "json2csv": "^5.0.7",
+    "node-fetch": "^3.2.3",
+    "ts-node": "^10.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.23"
+  }
+}
