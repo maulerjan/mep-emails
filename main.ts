@@ -23,7 +23,7 @@ async function run() {
 
     const list = []
 
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < members.length; i++) {
         await new Promise<void>(resolve => setTimeout(resolve, 300))
 
         const member = members[i]
