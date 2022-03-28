@@ -2,9 +2,12 @@ import {XMLParser} from 'fast-xml-parser'
 import {Parser} from 'json2csv'
 import cheerio from 'cheerio'
 import fetch from 'node-fetch'
+import fs from 'fs'
+import path from 'path'
 
 const listUrl = 'https://www.europarl.europa.eu/meps/en/full-list/xml'
 const profileUrlPrefix = 'https://www.europarl.europa.eu/meps/en/'
+const outputFileName = 'output.csv'
 const xmlParser = new XMLParser()
 
 async function run() {
@@ -20,8 +23,8 @@ async function run() {
 
     const list = []
 
-    for (let i = 0; i < members.length; i++) {
-        await new Promise<void>(resolve => setTimeout(resolve, 500))
+    for (let i = 0; i < 2; i++) {
+        await new Promise<void>(resolve => setTimeout(resolve, 300))
 
         const member = members[i]
         let html: string
@@ -62,7 +65,9 @@ async function run() {
     const parser = new Parser({fields: Object.keys(list[0])})
     const csv = parser.parse(list)
 
-    console.log(csv)
+    fs.writeFileSync(path.resolve(path.join(process.cwd(), outputFileName)), csv, {
+        encoding: 'utf-8'
+    })
 }
 
 run().catch(error => {
