@@ -1,6 +1,7 @@
 A script that fetches and decodes email addresses of all the current Members of European Parliament (MEPs).
 
 Pre-requisites:
+
 You need [Node.js](https://nodejs.org/en/download) installed.
 
 Usage:
