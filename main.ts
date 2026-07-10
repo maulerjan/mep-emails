@@ -41,7 +41,10 @@ async function run() {
 
         const dom = cheerio.load(html)
 
-        const email = dom('a.link_email').attr('href').slice(7).replace(/\[dot]/, '.').replace(/\[at]/, '@')
+        const emailHrefPrefixed = dom('a.link_email').attr('href')
+        const emailHref = emailHrefPrefixed.startsWith('mailto:') ? emailHrefPrefixed.slice(7) : emailHrefPrefixed
+        const emailReversed = emailHref.replace(/\[dot]/, '.').replace(/\[at]/, '@')
+        
         const website = dom('a.link_website')?.attr('href')
         const instagram = dom('a.link_instagram')?.attr('href')
         const facebook = dom('a.link_fb')?.attr('href')
@@ -52,7 +55,7 @@ async function run() {
             'Country': member.country,
             'Political group': member.politicalGroup,
             'National political group': member.nationalPoliticalGroup,
-            'E-mail': email.split('').reverse().join(''),
+            'E-mail': emailReversed.split('').reverse().join(''),
             'Website': website,
             'Instagram': instagram,
             'Facebook': facebook,
