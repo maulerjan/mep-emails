@@ -2,7 +2,7 @@
 A script that fetches and decodes email addresses of all the current Members of European Parliament (MEPs).
 
 ### Why
-European Parliament sometimes votes about important stuff. Contact all of them if you wish to change their mind. This script gives you all their email addresses at once.
+European Parliament sometimes votes about important stuff. Contact all of them if you wish to change their mind. This script gives you all their email addresses at once. **Please don't share the resulting list publicly to prevent spam.**
 
 ### Pre-requisites
 
