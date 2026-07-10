@@ -1,4 +1,4 @@
-A script that fetches and decodes all emails for the Members of European Parliament (MEPs).
+A script that fetches and decodes email addresses of all the current Members of European Parliament (MEPs).
 
 Usage:
 ```
