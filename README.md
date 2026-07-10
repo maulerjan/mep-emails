@@ -1,6 +1,8 @@
 ### What
 A script that fetches and decodes email addresses of all the current Members of European Parliament (MEPs).
 
+It will generate a list of all MEPs. For each MEP, the list contains: Full name, email, political group, national political group, social network links.
+
 ### Why
 European Parliament sometimes votes about important stuff. Contact all of them if you wish to change their mind. This script gives you all their email addresses at once. **Please don't share the resulting list publicly, we don't want to flood our MEPs with spam.**
 
