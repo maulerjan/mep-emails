@@ -14,3 +14,7 @@ npx tsx main.ts
 ```
 
 It will fetch & decode 1 email per second (due to rate limiting) and places the output to a file called `output.csv`.
+
+### Current status
+
+As of 2026, this script still works.
