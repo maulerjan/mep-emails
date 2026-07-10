@@ -17,4 +17,4 @@ It will fetch & decode 1 email per second (due to rate limiting) and places the
 
 ### Current status
 
-As of 2026, this script still works.
+As of July 2026, this script still works.
